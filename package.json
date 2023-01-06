@@ -1,6 +1,6 @@
 {
   "name": "@thencc/inkey-types",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "shared types for inkey-wallet + inkey-client",
   "main": "dist/index.js",
   "types": "src/index.ts",

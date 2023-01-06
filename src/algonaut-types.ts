@@ -185,10 +185,13 @@ export type AlgonautAtomicTransaction = {
 	isLogigSig: boolean;
 }
 
-export type InkeySignTxnResponse = {
+export type InkeyResponseBase = {
 	success: boolean;
 	reject?: boolean;
 	error?: any;
+}
+
+export type InkeySignTxnResponse = InkeyResponseBase & {
 	signedTxns?: Uint8Array[] | Uint8Array;
 }
 
