@@ -1,0 +1,16 @@
+{
+  "name": "@thencc/inkey-types",
+  "version": "0.0.1",
+  "description": "shared types for inkey-wallet + inkey-client",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "link-pnpm": "pnpm link --global",
+    "publish": "npm publish",
+    "publish-preview": "npm publish --dry-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": false
+}
