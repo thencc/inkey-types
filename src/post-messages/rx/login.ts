@@ -1,6 +1,5 @@
 import { InkeyRxMsgBase } from '../index';
 
-// import { InkeyAccountBase } from '../../../types';
 export type InkeyAccountBase = {
 	address: string;
 	username: string;

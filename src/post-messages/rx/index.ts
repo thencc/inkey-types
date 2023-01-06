@@ -4,13 +4,13 @@ import { InkeyPostMsgBase } from '../base';
 import { IFrameCtx } from '../index';
 
 // defaults / built-ins
-import { RxMsgLogin } from './login';
-import { RxMsgHide } from './hide';
-import { RxMsgDisconnect } from './disconnect';
 import { RxMsgStyleRecommendations } from './style-recs';
 import { RxMsgAsyncReply } from './async-reply';
-import { RxMsgReady } from './ready';
+import { RxMsgDisconnect } from './disconnect';
 import { RxMsgSetHeight } from './set-height';
+import { RxMsgLogin } from './login';
+import { RxMsgReady } from './ready';
+import { RxMsgHide } from './hide';
 
 // rx post msgs
 export type InkeyRxMsgBase<MessType = string, Payload = undefined> = InkeyPostMsgBase<MessType, Payload> & {
@@ -20,14 +20,13 @@ export type InkeyRxMsgBase<MessType = string, Payload = undefined> = InkeyPostMs
 };
 export type InkeyRxPostMsgDefault = RxMsgLogin | RxMsgHide | RxMsgDisconnect | RxMsgStyleRecommendations | RxMsgAsyncReply | RxMsgReady | RxMsgSetHeight;
 export type InkeyRxPostMsgType = InkeyRxPostMsgDefault['type'];
-export type InkeyRxMsg<T> = T extends InkeyRxMsgBase<string, T> ? T : InkeyRxPostMsgDefault; // accept passed in generic w constraints or a default/known post msg type
 export type RxEvents = MessageEvent<InkeyRxPostMsgDefault>;
 
 // re-exports
-export * from './login';
-export * from './hide';
-export * from './disconnect';
 export * from './style-recs';
 export * from './async-reply';
-export * from './ready';
+export * from './disconnect';
 export * from './set-height';
+export * from './login';
+export * from './ready';
+export * from './hide';
