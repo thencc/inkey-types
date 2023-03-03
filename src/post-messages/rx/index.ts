@@ -11,6 +11,7 @@ import { RxMsgSetHeight } from './set-height';
 import { RxMsgLogin } from './login';
 import { RxMsgReady } from './ready';
 import { RxMsgHide } from './hide';
+import { RxMsgShow } from './show';
 
 // rx post msgs
 export type InkeyRxMsgBase<MessType = string, Payload = undefined> = InkeyPostMsgBase<MessType, Payload> & {
@@ -18,7 +19,7 @@ export type InkeyRxMsgBase<MessType = string, Payload = undefined> = InkeyPostMs
 	source?: 'ncc-inkey-wallet';
 	context?: IFrameCtx;
 };
-export type InkeyRxPostMsgDefault = RxMsgLogin | RxMsgHide | RxMsgDisconnect | RxMsgStyleRecommendations | RxMsgAsyncReply | RxMsgReady | RxMsgSetHeight;
+export type InkeyRxPostMsgDefault = RxMsgLogin | RxMsgHide | RxMsgShow | RxMsgDisconnect | RxMsgStyleRecommendations | RxMsgAsyncReply | RxMsgReady | RxMsgSetHeight;
 export type InkeyRxPostMsgType = InkeyRxPostMsgDefault['type'];
 export type RxEvents = MessageEvent<InkeyRxPostMsgDefault>;
 
@@ -30,3 +31,4 @@ export * from './set-height';
 export * from './login';
 export * from './ready';
 export * from './hide';
+export * from './show';
