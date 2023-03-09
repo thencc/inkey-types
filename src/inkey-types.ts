@@ -4,6 +4,11 @@ export type InkeyConfig = {
 	align?: 'center' | 'left' | 'right';
 };
 
+export type InkeyClientAccount = {
+	address: string;
+	username: string;
+};
+
 export type FrameBusRequestsMap = Map<
 	string,
 	{
