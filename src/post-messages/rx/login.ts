@@ -1,11 +1,14 @@
 import { InkeyRxMsgBase } from '../index';
 
-export type InkeyAccountBase = {
+export type InkeyAccount = {
 	address: string;
-	username: string;
+	name: string;
+	chain: string;
+	walletId: string;
 }
+
 export type MsgPayloadLogin = {
-	accounts: InkeyAccountBase[];
+	accounts: InkeyAccount[];
 };
 
 export type RxMsgLogin = InkeyRxMsgBase<'login', MsgPayloadLogin>;
