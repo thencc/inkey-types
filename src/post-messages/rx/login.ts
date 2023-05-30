@@ -5,6 +5,9 @@ export type InkeyAccount = {
 	name: string;
 	chain: string;
 	walletId: string;
+	active: boolean;
+	timeAdded?: number; // datetime as number
+	timeLastUsed?: number;
 }
 
 export type MsgPayloadLogin = {

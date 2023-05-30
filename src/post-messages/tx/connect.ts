@@ -1,6 +1,6 @@
-import { InkeyTxMsgBase } from '../index';
+import { InkeyAccount, InkeyTxMsgBase } from '../index';
 
 export type TxMsgConnect = InkeyTxMsgBase<'connect', {
 	siteName?: string;
-	username?: string;
+	connectedAccounts?: InkeyAccount[];
 }>;
