@@ -2,6 +2,8 @@
 export type InkeyConfig = {
 	src?: string; // url
 	align?: 'center' | 'left' | 'right';
+	blur?: boolean;
+	darkMode?: boolean;
 };
 
 export type FrameBusRequestsMap = Map<
