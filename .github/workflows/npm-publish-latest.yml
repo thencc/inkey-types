@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
+          always-auth: true
           # creates an .npmrc
 
       # - name: "install"
@@ -33,4 +34,4 @@ jobs:
           PKG_VERSION_LOCAL=`cat package.json | jq -r '.version'`
           npm dist-tag add @thencc/inkey-types@$PKG_VERSION_LOCAL latest
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
