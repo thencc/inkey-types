@@ -1,3 +1,7 @@
+export type InkeyStyleObj = {
+	transparent?: boolean;
+}
+
 
 export type InkeyConfig = {
 	src?: string; // url
@@ -5,6 +9,7 @@ export type InkeyConfig = {
 	blur?: boolean; // blurs the sibling components when inkey is open
 	containerBg?: string; // color of the container. defaults to #ccc.
 	darkMode?: boolean;
+	styles?: InkeyStyleObj;
 };
 
 export type FrameBusRequestsMap = Map<
