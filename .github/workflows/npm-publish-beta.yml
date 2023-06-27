@@ -62,16 +62,16 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           # creates an .npmrc
 
-      - name: "setup pnpm"
-        uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 8.5.0
-          # auto install on use
-          run_install: |
-              args: [--no-frozen-lockfile, --strict-peer-dependencies]
+      # - name: "setup pnpm"
+      #   uses: pnpm/action-setup@v2.2.2
+      #   with:
+      #     version: 8.5.0
+      #     # auto install on use
+      #     run_install: |
+      #         args: [--no-frozen-lockfile, --strict-peer-dependencies]
 
-      - name: "build"
-        run: pnpm run build
+      # - name: "build"
+      #   run: pnpm run build
 
       - name: "publish"
         run: |
