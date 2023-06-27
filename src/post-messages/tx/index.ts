@@ -6,6 +6,7 @@ import { InkeyPostMsgBase } from '../base';
 import { TxMsgSetVisibility } from './set-visibility';
 import { TxMsgGetStyleRecs } from './get-style-recs';
 import { TxMsgSignTxnsRaw } from './sign-txns-raw';
+import { TxMsgSetStyles } from './set-styles';
 import { TxMsgDisconnect } from './disconnect';
 import { TxMsgInitComms } from './init-comms';
 import { TxMsgSignTxns } from './sign-txns';
@@ -20,13 +21,14 @@ export type InkeyTxMsgBase<MessType = string, Payload = undefined> = InkeyPostMs
 	async?: boolean;
 	uuid?: string;
 };
-export type InkeyTxPostMsgDefault = TxMsgGetStyleRecs | TxMsgInitComms | TxMsgSetApp | TxMsgSignTxnsRaw | TxMsgSignTxns | TxMsgConnect | TxMsgDisconnect | TxMsgReject | TxMsgSetVisibility;
+export type InkeyTxPostMsgDefault = TxMsgGetStyleRecs | TxMsgInitComms | TxMsgSetApp | TxMsgSignTxnsRaw | TxMsgSignTxns | TxMsgConnect | TxMsgDisconnect | TxMsgReject | TxMsgSetVisibility | TxMsgSetStyles;
 export type InkeyTxPostMsgType = InkeyTxPostMsgDefault['type'];
 export type TxEvents = MessageEvent<InkeyTxPostMsgDefault>;
 
 // re-exports
 export * from './set-visibility';
 export * from './get-style-recs';
+export * from './set-styles';
 export * from './sign-txns-raw';
 export * from './disconnect';
 export * from './init-comms';
