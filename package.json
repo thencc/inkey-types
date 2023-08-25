@@ -6,8 +6,8 @@
   "types": "src/index.ts",
   "scripts": {
     "link-pnpm": "pnpm link --global",
-    "publish:latest": "npm publish --access public",
-    "publish:beta": "npm publish --access public --tag beta",
+    "publish:latest": "npm dist-tag add @thencc/inkey-types@0.0.12 latest",
+    "publish:beta": "npm publish --access public --tag beta --greater-version-only",
     "publish-preview": "npm publish --dry-run"
   },
   "keywords": [],
